@@ -1,0 +1,3 @@
+ Book(id: integer, references: string, published_at: datetime, created_at: datetime, updated_at: datetime) 
+2.5.0 :017 > 
+
