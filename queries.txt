@@ -1,3 +1,10 @@
+rails generate model Book references published_at:datetime 
+rails generate model Author name:string
+
+rishi@rishi-VirtualBox:~/trainingSqlLite/bin$ rake db:migrate
+
+
+
  Book(id: integer, references: string, published_at: datetime, created_at: datetime, updated_at: datetime) 
 2.5.0 :017 > 
 
