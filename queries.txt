@@ -7,4 +7,30 @@ rishi@rishi-VirtualBox:~/trainingSqlLite/bin$ rake db:migrate
 
  Book(id: integer, references: string, published_at: datetime, created_at: datetime, updated_at: datetime) 
 2.5.0 :017 > 
+=======================
+
+rishi@rishi-VirtualBox:~/trainingSqlLite$ rake db:migrate
+== 20180725071516 CreateBooks: migrating ======================================
+-- create_table(:books)
+rake aborted!
+StandardError: An error has occurred, this and all later migrations canceled:
+
+undefined method `refernces' for #<ActiveRecord::ConnectionAdapters::SQLite3::TableDefinition:0x0000000005265430>
+Did you mean?  references
+/home/rishi/trainingSqlLite/db/migrate/20180725071516_create_books.rb:4:in `block in change'
+/home/rishi/trainingSqlLite/db/migrate/20180725071516_create_books.rb:3:in `change'
+/home/rishi/.rvm/gems/ruby-2.5.0@global/gems/rake-12.3.1/exe/rake:27:in `<top (required)>'
+/home/rishi/.rvm/gems/ruby-2.5.0@trainingSqlLite/bin/ruby_executable_hooks:15:in `eval'
+/home/rishi/.rvm/gems/ruby-2.5.0@trainingSqlLite/bin/ruby_executable_hooks:15:in `<main>'
+
+Caused by:
+NoMethodError: undefined method `refernces' for #<ActiveRecord::ConnectionAdapters::SQLite3::TableDefinition:0x0000000005265430>
+Did you mean?  references
+/home/rishi/trainingSqlLite/db/migrate/20180725071516_create_books.rb:4:in `block in change'
+/home/rishi/trainingSqlLite/db/migrate/20180725071516_create_books.rb:3:in `change'
+/home/rishi/.rvm/gems/ruby-2.5.0@global/gems/rake-12.3.1/exe/rake:27:in `<top (required)>'
+/home/rishi/.rvm/gems/ruby-2.5.0@trainingSqlLite/bin/ruby_executable_hooks:15:in `eval'
+/home/rishi/.rvm/gems/ruby-2.5.0@trainingSqlLite/bin/ruby_executable_hooks:15:in `<main>'
+Tasks: TOP => db:migrate
+(See full trace by running task with --trace)
 
