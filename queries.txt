@@ -34,3 +34,17 @@ Did you mean?  references
 Tasks: TOP => db:migrate
 (See full trace by running task with --trace)
 
+=====================
+rishi@rishi-VirtualBox:~/trainingSqlLite$ rake db:migrate
+== 20180725074129 CreateAuthors: migrating ====================================
+-- create_table(:authors)
+rake aborted!
+StandardError: An error has occurred, this and all later migrations canceled:
+
+SQLite3::SQLException: table "authors" already exists: CREATE TABLE "authors" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)
+/home/rishi/trainingSqlLite/db/migrate/20180725074129_create_authors.rb:3:in `change'
+/home/rishi/.rvm/gems/ruby-2.5.0@global/gems/rake-12.3.1/exe/rake:27:in `<top (required)>'
+/home/rishi/.rvm/gems/ruby-2.5.0@trainingSqlLite/bin/ruby_executable_hooks:15:in `eval'
+/home/rishi/.rvm/gems/ruby-2.5.0@trainingSqlLite/bin/ruby_executable_hooks:15:in `<main>'
+
+
